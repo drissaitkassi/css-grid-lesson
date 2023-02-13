@@ -1,0 +1,87 @@
+.body{
+
+    padding: 0;
+    margin: 0;
+
+}
+
+.item{
+
+    padding: 20px;
+}
+
+.container{
+
+    margin: 100px;
+    padding: 20px;
+    display: grid;
+
+    /* ********* grid template columns *********  */
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    
+    /* keep in mind that this is not only a 4 by 4 grid as you can see i have here more than 4 values
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+     
+    /* you can use percentage also 
+    grid-template-columns: 10% 20% 30% 40% ; */
+
+    /* you can also use the repeat function 
+    grid-template-columns: repeat(5, 1fr); */
+    /* 
+    you can also use pixels 
+    grid-template-columns: 100px 200px 500px 500px ; */
+
+
+    /* lets tackle gaps
+        row and column gaps can be specified separatly or in one line 
+    */
+
+    /* column height :
+     by default it fits content 
+     keep in mind that all colummn on a row will expand to the hight of the most tall column on that given row 
+
+     there is an option to control the hight regarless of the content of the column 
+
+     there is also a function to set minmax column hight 
+
+    
+    */
+
+    row-gap: 3px;
+    column-gap: 2px;
+
+    /* ********* grid auto rows *********  */
+
+    /* i think of it as an automatic way of managing hight of multiple rows
+    (notice that height and width do not change whether we are in row or column )
+    an important distinction should be made between main axis/cross axis alignement and width/height */
+
+
+    grid-auto-rows:auto;
+
+    /*
+    - what i noticed here is when i specify a fixed number of pixels : all rows hight are adjusted to that fixed number
+
+    - but when i use "auto" or "min/maxcontant"  only the hight of the row that have a column with content is changed to fit content height 
+    
+    - the minmax function lets you set a min and a max  but in a usful way : so you can set the max to fit content 
+    and the min to 200 px , what is great here is that all other rows without a content will have a height of 200px
+    
+    */
+
+    /* ********* grid template rows *********  */
+
+
+    
+
+}
+
+
+
+.item{
+
+    background-color: rgb(43, 134, 226);
+    color: white;
+    border:white 1px solid
+}
